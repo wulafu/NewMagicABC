@@ -1,7 +1,7 @@
 package cn.com.magicabc.ui.fragment;
 
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
@@ -30,7 +30,7 @@ public class OnlineMusicFragment extends BaseFragment implements HomeContract.Ho
   }
 
   @Override protected void afterCreate(Bundle savedInstanceState) {
-    rv_list.setLayoutManager(new LinearLayoutManager(getActivity()));
+    rv_list.setLayoutManager(new GridLayoutManager(getActivity(),4));
     commentAdapter = new CommentAdapter(getActivity());
      wordLessonRecyclerViewAdapter = new WordLessonRecyclerViewAdapter(getActivity());
     rv_list.setAdapter(wordLessonRecyclerViewAdapter);

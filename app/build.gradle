@@ -37,6 +37,7 @@ dependencies {
     })
 //  compile project(':library')
 //  compile 'com.android.support:appcompat-v7:25.3.1'
+    //compile 'com.hedgehog.ratingbar:app:1.1.2'
     compile rootProject.ext.dependencies.getAt("support-v4")
     compile rootProject.ext.dependencies.getAt("appcompat-v7")
     compile rootProject.ext.dependencies.getAt("design")

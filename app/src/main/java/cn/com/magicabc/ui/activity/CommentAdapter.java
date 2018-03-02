@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,8 +42,8 @@ public class CommentAdapter extends BaseRecyclerAdapter<List<GankEntity>> implem
   @Override
   public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
     CommentInfoViewHolder commentInfoViewHolder = (CommentInfoViewHolder) holder;
-    commentInfoViewHolder.tv.setText(dataList.get(position).getWho());
-    commentInfoViewHolder.tv1.setText(dataList.get(position).getDesc());
+   // commentInfoViewHolder.iv.setText(dataList.get(position).getWho());
+  //  commentInfoViewHolder.rb.setRating(3f);
 
   }
 
@@ -58,14 +58,14 @@ public class CommentAdapter extends BaseRecyclerAdapter<List<GankEntity>> implem
       }
 
       public class CommentInfoViewHolder extends RecyclerView.ViewHolder {
-   private TextView tv;
-   private TextView tv1;
+   private ImageView iv;
+  // private RatingBar rb;
 
 
     public CommentInfoViewHolder(View itemView) {
       super(itemView);
-      tv = (TextView) itemView.findViewById(R.id.tv);
-      tv1 = (TextView) itemView.findViewById(R.id.tv1);
+      iv = (ImageView) itemView.findViewById(R.id.iv);
+     // rb = (RatingBar) itemView.findViewById(R.id.rb);
 
       //replyView.setOnClickListener(CommentAdapter.this);
     }

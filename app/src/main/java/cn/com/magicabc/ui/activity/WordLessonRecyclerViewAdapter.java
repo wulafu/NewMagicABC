@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.concurrent.FutureTask;
 
 import cn.com.magicabc.R;
 import cn.com.magicabc.ui.bean.GankEntity;
@@ -65,14 +63,9 @@ public class WordLessonRecyclerViewAdapter extends RecyclerView.Adapter<WordLess
 
         public ViewHolder(View itemView) {
             super(itemView);
-            tv = (TextView) itemView.findViewById(R.id.tv);
-            tv1 = (TextView) itemView.findViewById(R.id.tv1);
-new Thread(new FutureTask<>(new Callable<Object>() {
-    @Override
-    public Object call() throws Exception {
-        return null;
-    }
-}));
+          //  tv = (TextView) itemView.findViewById(R.id.tv);
+          //  tv1 = (TextView) itemView.findViewById(R.id.tv1);
+
         }
     }
 
@@ -88,8 +81,8 @@ new Thread(new FutureTask<>(new Callable<Object>() {
     public void onBindViewHolder(final ViewHolder holder, final int position) {
 
 
-        holder.tv.setText(dataList.get(position).getDesc());
-        holder.tv1.setText(dataList.get(position).getWho());
+       // holder.tv.setText(dataList.get(position).getDesc());
+       // holder.tv1.setText(dataList.get(position).getWho());
 
 
     }
