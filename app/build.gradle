@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "cn.com.magicabc"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
+        }
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled true
+            useProguard true
+            //移除没用的资源文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+//  compile project(':library')
+//  compile 'com.android.support:appcompat-v7:25.3.1'
+    compile rootProject.ext.dependencies.getAt("support-v4")
+    compile rootProject.ext.dependencies.getAt("appcompat-v7")
+    compile rootProject.ext.dependencies.getAt("design")
+    compile rootProject.ext.dependencies.getAt("recyclerview")
+    compile rootProject.ext.dependencies.getAt("cardview")
+    compile rootProject.ext.dependencies.getAt("rxandroid")
+    compile rootProject.ext.dependencies.getAt("rxbinding")
+    compile rootProject.ext.dependencies.getAt("rxbinding-support-v4")
+    compile rootProject.ext.dependencies.getAt("rxbinding-appcompat-v7")
+    compile rootProject.ext.dependencies.getAt("rxbinding-design")
+    compile rootProject.ext.dependencies.getAt("rxbinding-recyclerview-v7")
+    compile rootProject.ext.dependencies.getAt("ormlite-android")
+    compile rootProject.ext.dependencies.getAt("stream")
+    compile rootProject.ext.dependencies.getAt("retrofit")
+    compile rootProject.ext.dependencies.getAt("adapter-rxjava")
+    compile rootProject.ext.dependencies.getAt("fastjson")
+    compile rootProject.ext.dependencies.getAt("okhttp3-logging-interceptor")
+    compile rootProject.ext.dependencies.getAt("stetho")
+    compile rootProject.ext.dependencies.getAt("stetho-okhttp3")
+    compile rootProject.ext.dependencies.getAt("butterknife")
+    annotationProcessor rootProject.ext.dependencies.getAt("butterknife-compiler")
+    compile rootProject.ext.dependencies.getAt("glide")
+    compile rootProject.ext.dependencies.getAt("gson")
+    compile rootProject.ext.dependencies.getAt("dagger")
+    annotationProcessor rootProject.ext.dependencies.getAt("dagger-compiler")
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    testCompile 'junit:junit:4.12'
+    compile 'javax.annotation:javax.annotation-api:1.2'
+}
