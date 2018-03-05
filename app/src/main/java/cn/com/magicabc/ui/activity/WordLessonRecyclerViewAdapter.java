@@ -5,13 +5,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import cn.com.magicabc.R;
 import cn.com.magicabc.ui.bean.GankEntity;
+import cn.com.magicabc.ui.bean.HomeWorkBean;
 
 /**
  * Created by WuXiaolong
@@ -21,7 +22,7 @@ public class WordLessonRecyclerViewAdapter extends RecyclerView.Adapter<WordLess
 
 
     private Context mContext;
-    private List<GankEntity> dataList = new ArrayList<>();
+    private List<HomeWorkBean> dataList = new ArrayList<>();
 
     @Override
     public void onClick(View v) {
@@ -41,7 +42,7 @@ public class WordLessonRecyclerViewAdapter extends RecyclerView.Adapter<WordLess
 
     private OnRecyclerViewItemClickListener mOnItemClickListener = null;
 
-    public void addAllData(List<GankEntity> dataList) {
+    public void addAllData(List<HomeWorkBean> dataList) {
         clearData();
         this.dataList.addAll(dataList);
         notifyDataSetChanged();
@@ -57,13 +58,24 @@ public class WordLessonRecyclerViewAdapter extends RecyclerView.Adapter<WordLess
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView tv;
-        public TextView tv1;
+        public ImageView iv1;
+        public ImageView iv2;
+        public ImageView iv3;
+        public ImageView iv4;
+        public ImageView iv5;
+        public ImageView iv6;
+
+
 
 
         public ViewHolder(View itemView) {
             super(itemView);
-          //  tv = (TextView) itemView.findViewById(R.id.tv);
+           iv1 = (ImageView) itemView.findViewById(R.id.iv1);
+           iv2 = (ImageView) itemView.findViewById(R.id.iv2);
+           iv3 = (ImageView) itemView.findViewById(R.id.iv3);
+           iv4 = (ImageView) itemView.findViewById(R.id.iv4);
+           iv5 = (ImageView) itemView.findViewById(R.id.iv5);
+           iv6 = (ImageView) itemView.findViewById(R.id.iv6);
           //  tv1 = (TextView) itemView.findViewById(R.id.tv1);
 
         }
