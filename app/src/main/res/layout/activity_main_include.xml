@@ -4,14 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/main_background"
 
     >
 
   <android.support.design.widget.AppBarLayout
+
       android:id="@+id/appbar"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      app:elevation="0dp"
       >
 
     <android.support.v7.widget.Toolbar
@@ -20,21 +23,58 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:visibility="gone"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         />
+    <include layout="@layout/include_main_tab_bar"/>
 
-    <include layout="@layout/include_main_tab_bar" />
   </android.support.design.widget.AppBarLayout>
-
-  <FrameLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      >
+  <LinearLayout
+                android:layout_marginTop="@dimen/xdp_23"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_height="match_parent">
+    <TextView
+        android:drawablePadding="-20dp"
+        android:paddingRight="20dp"
+        android:background="@color/white"
+        android:drawableRight="@drawable/arrow"
+        android:layout_width="@dimen/xdp_309"
+        android:gravity="center"
+        android:textColor="#FC7247"
+        android:textSize="@dimen/xsp_14"
+        android:text="Mark RTG 2017年学习报告"
+        android:layout_height="@dimen/xdp_30"/>
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
+        android:layout_marginTop="@dimen/xdp_13"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/xdp_379"
         />
 
-  </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/xdp_52"
+        android:layout_marginRight="@dimen/xdp_52"
+        >
+      <ImageView
+          android:layout_alignParentLeft="true"
+          android:layout_width="@dimen/xdp_77"
+          android:layout_height="@dimen/xdp_67"
+          android:src="@drawable/huibenguan"
+          />
+      <ImageView
+          android:layout_alignParentRight="true"
+          android:layout_width="@dimen/xdp_77"
+          android:layout_height="@dimen/xdp_67"
+          android:src="@drawable/dancika"
+          />
+    </RelativeLayout>
+
+
+  </LinearLayout>
+
 </LinearLayout>
