@@ -1,7 +1,5 @@
 package cn.com.magicabc.http;
 
-import android.util.Log;
-
 import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -21,12 +19,12 @@ public class HttpTransformer<R extends HttpResult<T>, T> implements Observable.T
     return rObservable.flatMap(new Func1<R, Observable<T>>() {
       @Override public Observable<T> call(R r) {
 
-        Log.d(TAG, r.isError() ? "HttpResult is error" : "HttpResult is right");
+      //  Log.d(TAG, r.isError() ? "HttpResult is error" : "HttpResult is right");
 
-        if (r.isError()) {
+        if (!r.isSuccessful()) {
           return Observable.error(new ApiException("网络出错"));
         } else {
-          return createData(r.getResults());
+          return createData(r.getResult());
         }
       }
     })

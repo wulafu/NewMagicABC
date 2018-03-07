@@ -4,8 +4,10 @@ package cn.com.magicabc.http;
 import java.util.List;
 
 import cn.com.magicabc.ui.bean.GankEntity;
+import cn.com.magicabc.ui.bean.HomeWorkBean;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 import rx.Observable;
 
 /**
@@ -15,7 +17,7 @@ import rx.Observable;
 
 public interface HttpApi {
 
-    String BASE_URL = "http://gank.io/api/";
+    String BASE_URL = "http://192.168.1.251:8080/magicabc.app/";
 
     /**
      * 获取分类数据
@@ -27,4 +29,8 @@ public interface HttpApi {
     @GET("data/{category}/{pageSize}/{page}")
     Observable<HttpResult<List<GankEntity>>> getCategoryData(@Path("category") String category,
                                                              @Path("pageSize") int pageSize, @Path("page") int page);
+
+    @GET("getAllMyHomeWorkList")
+    Observable<HttpResult<List<HomeWorkBean>>> getHomeWorkBeans(@Query("userphone") String userphone,
+                                                                @Query("grade") String grade);
 }

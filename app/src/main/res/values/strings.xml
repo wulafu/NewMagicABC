@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BabyMusic</string>
+    <string name="app_name">MagicABC</string>
 
     <!-- 加载状态相关 -->
     <string name="view_empty">没有数据~</string>
@@ -81,5 +81,20 @@
     <string name="about_jianshu">http://www.jianshu.com/users/3231579893ac</string>
     <string name="about_github">https://github.com/wangchenyan</string>
     <string name="no_permission">没有%1$s权限，无法%2$s！</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="ui_input_loginpwd">请输入密码</string>
+    <string name="mine_input_phone">请输入手机号</string>
+    <string name="forget_pd">忘记密码</string>
+    <string name="register_login">注册登录</string>
+    <string name="getcode">获取验证码</string>
+    <string name="forget_state">请填写注册的手机号，我们将给您发送验证码</string>
+    <string name="register_tint">注册表示同意《用户协议》</string>
+    <string name="register_gologin">已有账号直接登录</string>
+    <string name="changeimg">更换头像</string>
+    <string name="babynametint">宝贝昵称</string>
+    <string name="babybirthday">宝贝生日</string>
+    <string name="babysex">宝贝性别</string>
+    <string name="nextstep">下一步</string>
 
 </resources>

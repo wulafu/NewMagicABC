@@ -63,6 +63,14 @@ public class UIUtils {
     public static String getString(int resId) {
         return getResources().getString(resId);
     }
+ /**
+     * 获取demiens
+     * @param resId 字符串资源id
+     * @return float
+     */
+    public static float getdimens(int resId) {
+        return getResources().getDimension(resId);
+    }
 
     /**
      * 获取字符串数组

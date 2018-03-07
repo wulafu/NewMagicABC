@@ -7,33 +7,42 @@ package cn.com.magicabc.http;
 
 public class HttpResult<T> {
 
-    private int count;
+    private int code;
+    private String msg;
+    //private String obj;
+    private T result;
 
-    private boolean error;
 
-    private T results;
-
-    public int getCount() {
-        return count;
+    public int getCode() {
+        return code;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public String getMsg() {
+        return msg;
     }
 
-    public boolean isError() {
-        return error;
+    public void setCode(int code) {
+        this.code = code;
     }
 
-    public void setError(boolean error) {
-        this.error = error;
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 
-    public T getResults() {
-        return results;
+    public boolean isSuccessful() {
+        return code == 200 ? true : false;
     }
 
-    public void setResults(T results) {
-        this.results = results;
+    public T getResult() {
+        return result;
+    }
+
+    public void setResult(T result) {
+        this.result = result;
+    }
+
+    @Override
+    public String toString() {
+        return "[" + "code:" + code + " msg: " + msg + " data: " + result + "]";
     }
 }

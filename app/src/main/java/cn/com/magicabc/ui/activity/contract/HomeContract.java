@@ -5,7 +5,7 @@ import java.util.List;
 
 import cn.com.magicabc.ui.activity.view.BaseView;
 import cn.com.magicabc.ui.base.BasePresenter;
-import cn.com.magicabc.ui.bean.GankEntity;
+import cn.com.magicabc.ui.bean.HomeWorkBean;
 
 /**
  * Created by beifeng on 2017/5/9.
@@ -14,7 +14,7 @@ import cn.com.magicabc.ui.bean.GankEntity;
 
 public interface HomeContract {
   interface HomeView extends BaseView<Presenter> {
-    void displayData(List<GankEntity> gankEntities);
+    void displayData(List<HomeWorkBean> gankEntities);
   }
 
   interface Presenter extends BasePresenter {

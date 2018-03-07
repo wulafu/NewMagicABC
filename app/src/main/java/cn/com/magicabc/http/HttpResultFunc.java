@@ -10,9 +10,9 @@ public class HttpResultFunc<T> implements Func1<HttpResult<T>, T> {
 
     @Override
     public T call(HttpResult<T> tHttpResult) {
-        if (tHttpResult.isError()) {
+        if (!tHttpResult.isSuccessful()) {
             throw new ApiException("网络异常");
         }
-        return tHttpResult.getResults();
+        return tHttpResult.getResult();
     }
 }

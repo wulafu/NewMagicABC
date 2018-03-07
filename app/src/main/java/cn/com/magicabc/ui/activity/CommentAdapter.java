@@ -64,7 +64,7 @@ public class CommentAdapter extends BaseRecyclerAdapter<List<GankEntity>> implem
 
     public CommentInfoViewHolder(View itemView) {
       super(itemView);
-      iv = (ImageView) itemView.findViewById(R.id.iv);
+     // iv = (ImageView) itemView.findViewById(R.id.iv);
      // rb = (RatingBar) itemView.findViewById(R.id.rb);
 
       //replyView.setOnClickListener(CommentAdapter.this);

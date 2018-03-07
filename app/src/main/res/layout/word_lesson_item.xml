@@ -1,67 +1,403 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="-35dp">
+    <ImageView
+        android:layout_alignParentRight="true"
+
+        android:id="@+id/vline_right"
+        android:layout_marginTop="35dp"
 
 
+        android:layout_width="@dimen/xdp_14"
+        android:layout_height="@dimen/xdp_95"
+        android:layout_marginRight="@dimen/xdp_67"
+        android:background="@drawable/vline"/>
+    <ImageView
+        android:layout_alignParentLeft="true"
 
-  >
+        android:id="@+id/vline_left"
+        android:layout_marginTop="@dimen/xdp_130"
+
+
+        android:layout_width="@dimen/xdp_14"
+        android:layout_height="@dimen/xdp_95"
+        android:layout_marginLeft="@dimen/xdp_67"
+        android:background="@drawable/vline"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:background="@color/translucent"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/xdp_35"
+        android:layout_marginRight="@dimen/xdp_35"
+        android:layout_height="@dimen/xdp_71">
+
 
     <LinearLayout
-        android:layout_centerInParent="true"
+        android:background="@color/translucent"
+        android:id="@+id/ll_back"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="match_parent"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:layout_marginLeft="50dp"
+android:paddingLeft="@dimen/xdp_32"
+        android:layout_marginRight="@dimen/xdp_32"
+        >
+        <ImageView
+
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hline1"/>
+        <ImageView
+
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hline2"/>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:background="@color/translucent"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+android:gravity="center_vertical"
+        android:orientation="horizontal"
+
         >
         <LinearLayout
-            android:gravity="center"
-            android:layout_width="50dp"
+          android:gravity="left"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
 
             android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="@dimen/xdp_65"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+                <RelativeLayout
+                    android:layout_width="@dimen/xdp_65"
+                    android:layout_height="@dimen/xdp_50">
+
+                    <ImageView
+                        android:id="@+id/iv1"
+                        android:layout_width="@dimen/xdp_65"
+                        android:layout_height="@dimen/xdp_50"
+                        android:src="@mipmap/ic_launcher"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/xdp_8"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="U1L1"
+                        android:textSize="@dimen/xsp_18"
+                        />
+                </RelativeLayout>
+                <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_starSize="@dimen/xdp_10"
+                    app:srb_numberOfStars="3"
+                    app:srb_rating="3"
+                    app:srb_stepSize="0.5"
+                    app:srb_borderColor="@color/blue"
+                    app:srb_fillColor="@color/blue"
+                    />
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
-        <ImageView
-            android:layout_marginLeft="-10dp"
-            android:layout_marginRight="-10dp"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hlineshape"/>
-        <LinearLayout
-            android:gravity="center"
-            android:layout_width="50dp"
 
+
+        <LinearLayout
+           android:gravity="center_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="@dimen/xdp_65"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+                <RelativeLayout
+                    android:layout_width="@dimen/xdp_65"
+                    android:layout_height="@dimen/xdp_50">
+
+                    <ImageView
+                        android:id="@+id/iv2"
+                        android:layout_width="@dimen/xdp_65"
+                        android:layout_height="@dimen/xdp_50"
+                        android:src="@mipmap/ic_launcher"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/xdp_8"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="U1L1"
+                        android:textSize="@dimen/xsp_18"
+                        />
+                </RelativeLayout>
+                <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_starSize="@dimen/xdp_10"
+                    app:srb_numberOfStars="3"
+                    app:srb_rating="3"
+                    app:srb_stepSize="0.5"
+                    app:srb_borderColor="@color/blue"
+                    app:srb_fillColor="@color/blue"
+                    />
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
-        <ImageView
-            android:layout_marginLeft="-10dp"
-            android:layout_marginRight="-10dp"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hlineshape"/>
+
         <LinearLayout
-            android:gravity="center"
-            android:layout_width="50dp"
-
-
+            android:layout_width="0dp"
+            android:gravity="right"
+            android:layout_weight="1"
             android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="@dimen/xdp_65"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+                <RelativeLayout
+                    android:layout_width="@dimen/xdp_65"
+                    android:layout_height="@dimen/xdp_50">
+
+                    <ImageView
+                        android:id="@+id/iv3"
+                        android:layout_width="@dimen/xdp_65"
+                        android:layout_height="@dimen/xdp_50"
+                        android:src="@mipmap/ic_launcher"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/xdp_8"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="U1L1"
+                        android:textSize="@dimen/xsp_18"
+                        />
+                </RelativeLayout>
+                <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_starSize="@dimen/xdp_10"
+                    app:srb_numberOfStars="3"
+                    app:srb_rating="3"
+                    app:srb_stepSize="0.5"
+                    app:srb_borderColor="@color/blue"
+                    app:srb_fillColor="@color/blue"
+                    />
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
-        <ImageView
-            android:layout_marginLeft="-10dp"
-            android:layout_marginRight="-10dp"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hlineshape"/>
-        <LinearLayout
-            android:layout_width="50dp"
 
+
+
+    </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="35dp"
+        android:background="@color/translucent"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/xdp_35"
+        android:layout_marginRight="@dimen/xdp_35"
+        android:layout_height="@dimen/xdp_71">
+        <LinearLayout
+            android:background="@color/translucent"
+            android:id="@+id/ll_back1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/xdp_32"
+            android:layout_marginRight="@dimen/xdp_32"
+            >
+            <ImageView
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hline3"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hline4"/>
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:background="@color/translucent"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+
+        >
+        <LinearLayout
+            android:gravity="left"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="@dimen/xdp_65"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+                <RelativeLayout
+                    android:layout_width="@dimen/xdp_65"
+                    android:layout_height="@dimen/xdp_50">
+
+                    <ImageView
+                        android:id="@+id/iv4"
+                        android:layout_width="@dimen/xdp_65"
+                        android:layout_height="@dimen/xdp_50"
+                        android:src="@mipmap/ic_launcher"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/xdp_8"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="U1L1"
+                        android:textSize="@dimen/xsp_18"
+                        />
+                </RelativeLayout>
+                <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_starSize="@dimen/xdp_10"
+                    app:srb_numberOfStars="3"
+                    app:srb_rating="3"
+                    app:srb_stepSize="0.5"
+                    app:srb_borderColor="@color/blue"
+                    app:srb_fillColor="@color/blue"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="@dimen/xdp_65"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+                <RelativeLayout
+                    android:layout_width="@dimen/xdp_65"
+                    android:layout_height="@dimen/xdp_50">
+
+                    <ImageView
+                        android:id="@+id/iv5"
+                        android:layout_width="@dimen/xdp_65"
+                        android:layout_height="@dimen/xdp_50"
+                        android:src="@mipmap/ic_launcher"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/xdp_8"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="U1L1"
+                        android:textSize="@dimen/xsp_18"
+                        />
+                </RelativeLayout>
+                <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_starSize="@dimen/xdp_10"
+                    app:srb_numberOfStars="3"
+                    app:srb_rating="3"
+                    app:srb_stepSize="0.5"
+                    app:srb_borderColor="@color/blue"
+                    app:srb_fillColor="@color/blue"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="@dimen/xdp_65"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+                <RelativeLayout
+                    android:layout_width="@dimen/xdp_65"
+                    android:layout_height="@dimen/xdp_50">
+
+                    <ImageView
+                        android:id="@+id/iv6"
+                        android:layout_width="@dimen/xdp_65"
+                        android:layout_height="@dimen/xdp_50"
+                        android:src="@mipmap/ic_launcher"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/xdp_8"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="U1L1"
+                        android:textSize="@dimen/xsp_18"
+                        />
+                </RelativeLayout>
+                <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_starSize="@dimen/xdp_10"
+                    app:srb_numberOfStars="3"
+                    app:srb_rating="3"
+                    app:srb_stepSize="0.5"
+                    app:srb_borderColor="@color/blue"
+                    app:srb_fillColor="@color/blue"
+                    />
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
@@ -84,102 +420,7 @@
         <!--hedgehog:starImagePadding="2dp"/>-->
 
     </LinearLayout>
-
-    <LinearLayout
-        android:background="@color/translucent_grey"
-        android:layout_centerInParent="true"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:layout_marginLeft="50dp"
-        >
-        <LinearLayout
-            android:gravity="center"
-            android:layout_width="50dp"
-
-            android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/iv"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/ic_launcher"/>
-
-        </LinearLayout>
-        <ImageView
-            android:layout_marginLeft="-10dp"
-            android:layout_marginRight="-10dp"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            />
-        <LinearLayout
-            android:gravity="center"
-            android:layout_width="50dp"
-
-            android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/iv1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/ic_launcher"/>
-
-        </LinearLayout>
-        <ImageView
-            android:layout_marginLeft="-10dp"
-            android:layout_marginRight="-10dp"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-         />
-        <LinearLayout
-            android:gravity="center"
-            android:layout_width="50dp"
-
-
-            android:layout_height="match_parent">
-            <ImageView
-
-                android:id="@+id/iv2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/ic_launcher"/>
-
-        </LinearLayout>
-        <ImageView
-            android:layout_marginLeft="-10dp"
-            android:layout_marginRight="-10dp"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-           />
-        <LinearLayout
-            android:layout_width="50dp"
-
-            android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/iv3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/ic_launcher"/>
-
-        </LinearLayout>
-
-        <!--<com.hedgehog.ratingbar.RatingBar-->
-<!--android:id="@+id/rb"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_centerInParent="true"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:layout_marginTop="2dp"-->
-            <!--hedgehog:clickable="true"-->
-            <!--hedgehog:halfstart="true"-->
-            <!--hedgehog:starCount="3"-->
-            <!--hedgehog:starEmpty="@mipmap/star_empty"-->
-            <!--hedgehog:starFill="@mipmap/star_full"-->
-            <!--hedgehog:starHalf="@mipmap/star_half"-->
-            <!--hedgehog:starImageHeight="10dp"-->
-            <!--hedgehog:starImageWidth="10dp"-->
-            <!--hedgehog:starImagePadding="2dp"/>-->
-
-    </LinearLayout>
-
+    </RelativeLayout>
+</LinearLayout>
 
 </RelativeLayout>

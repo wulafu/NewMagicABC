@@ -1,16 +1,15 @@
 package cn.com.magicabc;
 
-import android.Manifest;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.RelativeLayout;
 
 import java.util.List;
 
@@ -23,40 +22,41 @@ import cn.com.magicabc.ui.activity.SettingActivity;
 import cn.com.magicabc.ui.activity.component.DaggerHomeComponent;
 import cn.com.magicabc.ui.activity.module.HomeModule;
 import cn.com.magicabc.ui.activity.persenter.HomePresenter;
-import cn.com.magicabc.ui.adapter.FragmentAdapter;
 import cn.com.magicabc.ui.base.BaseActivity;
 import cn.com.magicabc.ui.fragment.LocalMusicFragment;
 import cn.com.magicabc.ui.fragment.OnlineMusicFragment;
+import cn.com.magicabc.ui.main.MainFragment;
 import cn.com.magicabc.util.PermissionListener;
-import cn.com.magicabc.util.ToastUtils;
 
 
 public class MainActivity extends BaseActivity implements PermissionListener {
 
   private static final String TAG = "main";
-  @BindView(R.id.drawer_layout) DrawerLayout drawerLayout;
-  @BindView(R.id.navigation_view) NavigationView navigation_view;
-  @BindView(R.id.iv_menu) ImageView ivMenu;
+
+  @BindView(R.id.rl_me)
+  RelativeLayout mRlme;  @BindView(R.id.iv_menu)
+  ImageView mIvMenu;
   @BindView(R.id.iv_search) ImageView ivSearch;
-  @BindView(R.id.tv_local_music) TextView tvLocalMusic;
-  @BindView(R.id.tv_online_music) TextView tvOnlineMusic;
   @BindView(R.id.viewpager) ViewPager mViewPager;
   private LocalMusicFragment localMusicFragment;
   private OnlineMusicFragment onlineMusicFragment;
+  private MainFragment mMainFragment;
 
   @Inject
   HomePresenter homePersenter;
 
   @Override protected int getLayoutId() {
-    return R.layout.activity_main;
+    return R.layout.activity_main_include;
   }
 
   @Override protected void afterCreate(Bundle savedInstanceState) {
-    FragmentAdapter adapter = new FragmentAdapter(getSupportFragmentManager());
+    MyPagerAdapter adapter = new MyPagerAdapter();
     localMusicFragment = new LocalMusicFragment();
     onlineMusicFragment = new OnlineMusicFragment();
+    onlineMusicFragment = new OnlineMusicFragment();
+    mMainFragment = new MainFragment();
   //  onlineMusicFragment.setPresenter(homePersenter);
-    adapter.addFragment(onlineMusicFragment);
+//    adapter.addFragment(mMainFragment);
     mViewPager.setAdapter(adapter);
     mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
       @Override
@@ -65,21 +65,15 @@ public class MainActivity extends BaseActivity implements PermissionListener {
       }
 
       @Override public void onPageSelected(int position) {
-        if (position == 0) {
-          tvLocalMusic.setSelected(true);
-          tvOnlineMusic.setSelected(false);
-        } else {
-          tvLocalMusic.setSelected(false);
-          tvOnlineMusic.setSelected(true);
-        }
+
       }
 
       @Override public void onPageScrollStateChanged(int state) {
 
       }
     });
-    tvLocalMusic.setSelected(true);
-requestPermissions(new String[]{Manifest.permission.CALL_PHONE},this);
+
+    //requestPermissions(new String[]{Manifest.permission.CALL_PHONE},this);
     DaggerHomeComponent.builder()
         .applicationComponent(BabyApplication.getApplication().getApplicationComponent())
         .homeModule(new HomeModule(onlineMusicFragment))
@@ -88,12 +82,12 @@ requestPermissions(new String[]{Manifest.permission.CALL_PHONE},this);
 
   }
 
-  @OnClick({ R.id.iv_menu,R.id.iv_search}) public void onViewClicked(View view) {
+  @OnClick({ R.id.rl_me,R.id.iv_search}) public void onViewClicked(View view) {
     switch (view.getId()) {
-      case R.id.iv_menu:
+      case R.id.rl_me:
         //drawerLayout.openDrawer(GravityCompat.START);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-          ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this, ivMenu, ivMenu.getTransitionName());
+          ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this, mIvMenu, mIvMenu.getTransitionName());
           startActivity(new Intent(MainActivity.this, SettingActivity.class),activityOptionsCompat.toBundle());
         } else {
           startActivity(new Intent(MainActivity.this, SettingActivity.class));
@@ -121,8 +115,35 @@ requestPermissions(new String[]{Manifest.permission.CALL_PHONE},this);
 
   @Override
   public void onDenied(List<String> deniedPermissions) {
-ToastUtils.showLong("wwww");
 
+  }
+
+  class  MyPagerAdapter extends PagerAdapter {
+
+
+
+    @Override
+    public int getCount() {
+      return 2;
+    }
+
+    @Override
+    public boolean isViewFromObject(View view, Object object) {
+      return view == object;
+    }
+
+    @Override
+    public Object instantiateItem(ViewGroup container, int position) {
+   //   ImageView imageView = images.get(position);
+      View inflate = View.inflate(MainActivity.this, R.layout.fragment_item, null);
+       container.addView(inflate);
+      return inflate;
+    }
+
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object) {
+      container.removeView((View) object);
+    }
   }
 }
 

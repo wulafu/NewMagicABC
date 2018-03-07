@@ -7,19 +7,26 @@
     <color name="white">@android:color/white</color>
     <color name="black">@android:color/black</color>
     <color name="red">#F44336</color>
+    <color name="green">#60C05A</color>
     <color name="blue">#2196F3</color>
-    <color name="grey">#9E9E9E</color>
-    <color name="grey_300">#E0E0E0</color>
-    <color name="grey_900">#212121</color>
+    <color name="grey">#999999</color>
+    <color name="grey_333">#333333</color>
+    <color name="grey_900">#E8E8E8</color>
     <color name="translucent_white">#80FFFFFF</color>
     <color name="translucent_black">#80000000</color>
     <color name="translucent_grey">#809E9E9E</color>
     <color name="translucent_white_8p">#14FFFFFF</color>
+    <color name="translucent">#00000000</color>
+    <color name="textcolortint">#AEAEAE</color>
+    <color name="userphoneline">#EEEEEE</color>
+    <color name="rgbe3e3e3">#E3E3E3</color>
     <color name="translucent_white_16p">#29FFFFFF</color>
     <color name="translucent_white_24p">#3DFFFFFF</color>
     <!--play bar-->
     <color name="translucent_white_96p">#F5FFFFFF</color>
     <color name="translucent_grey_300_96p">#F5E0E0E0</color>
+    <color name="point_white">#E8E8E8</color>
+
     <color name="translucent_grey_900_96p">#F5212121</color>
     <color name="translucent_grey_700_96p">#F5616161</color>
 </resources>

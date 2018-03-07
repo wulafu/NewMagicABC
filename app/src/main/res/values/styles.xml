@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/translucent</item>
+        <item name="colorPrimaryDark">@color/translucent</item>
+        <item name="colorAccent">@color/translucent</item>
         <item name="styleNetworkStateView">@style/NetworkStateViewTheme</item>
     </style>
 
@@ -17,7 +17,7 @@
 
     <!-- 标题栏弹出框样式 -->
     <style name="ToolBarPopupTheme" parent="@style/ThemeOverlay.AppCompat.Light">
-        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/translucent</item>
         <item name="android:background">@color/white</item>
     </style>
 
@@ -32,9 +32,9 @@
     </style>
 
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/translucent</item>
+        <item name="colorPrimaryDark">@color/translucent</item>
+        <item name="colorAccent">@color/translucent</item>
         <item name="styleNetworkStateView">@style/NetworkStateViewTheme</item>
     </style>
 

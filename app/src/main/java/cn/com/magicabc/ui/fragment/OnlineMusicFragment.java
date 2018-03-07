@@ -1,7 +1,7 @@
 package cn.com.magicabc.ui.fragment;
 
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
@@ -12,7 +12,7 @@ import cn.com.magicabc.ui.activity.CommentAdapter;
 import cn.com.magicabc.ui.activity.WordLessonRecyclerViewAdapter;
 import cn.com.magicabc.ui.activity.contract.HomeContract;
 import cn.com.magicabc.ui.base.BaseFragment;
-import cn.com.magicabc.ui.bean.GankEntity;
+import cn.com.magicabc.ui.bean.HomeWorkBean;
 import cn.com.magicabc.util.ToastUtils;
 
 /**
@@ -30,7 +30,7 @@ public class OnlineMusicFragment extends BaseFragment implements HomeContract.Ho
   }
 
   @Override protected void afterCreate(Bundle savedInstanceState) {
-    rv_list.setLayoutManager(new GridLayoutManager(getActivity(),4));
+    rv_list.setLayoutManager(new LinearLayoutManager(getActivity()));
     commentAdapter = new CommentAdapter(getActivity());
      wordLessonRecyclerViewAdapter = new WordLessonRecyclerViewAdapter(getActivity());
     rv_list.setAdapter(wordLessonRecyclerViewAdapter);
@@ -57,11 +57,22 @@ public class OnlineMusicFragment extends BaseFragment implements HomeContract.Ho
     showErrorView();
   }
 
-  @Override public void displayData(List<GankEntity> gankEntities) {
+  @Override public void displayData(List<HomeWorkBean> gankEntities) {
+
     ToastUtils.showLong(""+gankEntities.size());
+    if(gankEntities!=null&&gankEntities.size()==0){
+showEmptyView();
+    }else{
+      wordLessonRecyclerViewAdapter.addAllData(gankEntities);
+    }
 
 
-    wordLessonRecyclerViewAdapter.addAllData(gankEntities);
 
+  }
+
+  @Override
+  public void onNetworkViewRefresh() {
+    super.onNetworkViewRefresh();
+    presenter.subscribe();
   }
 }

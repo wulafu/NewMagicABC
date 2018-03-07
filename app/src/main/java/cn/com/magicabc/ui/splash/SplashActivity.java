@@ -7,9 +7,9 @@ import android.widget.TextView;
 import java.util.Calendar;
 
 import butterknife.BindView;
-import cn.com.magicabc.MainActivity;
 import cn.com.magicabc.R;
 import cn.com.magicabc.ui.base.BaseActivity;
+import cn.com.magicabc.ui.guide.GuideActivity;
 import cn.com.magicabc.util.CountDownUtils;
 import cn.com.magicabc.util.LogUtils;
 import cn.com.magicabc.widget.CirclePercentView;
@@ -76,7 +76,7 @@ public class SplashActivity extends BaseActivity {
    */
   private void startMainActivity() {
     Intent intent = new Intent();
-    intent.setClass(this, MainActivity.class);
+    intent.setClass(this, GuideActivity.class);
     intent.putExtras(getIntent());
     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
     intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);

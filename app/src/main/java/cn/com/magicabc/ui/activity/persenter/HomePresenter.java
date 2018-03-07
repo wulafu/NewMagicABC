@@ -12,7 +12,7 @@ import cn.com.magicabc.http.HttpResult;
 import cn.com.magicabc.http.HttpTransformer;
 import cn.com.magicabc.ui.activity.contract.HomeContract;
 import cn.com.magicabc.ui.activity.persenter.component.DaggerPresenterComponent;
-import cn.com.magicabc.ui.bean.GankEntity;
+import cn.com.magicabc.ui.bean.HomeWorkBean;
 import cn.com.magicabc.util.ActivityScoped;
 import cn.com.magicabc.util.LogUtils;
 import rx.Subscriber;
@@ -44,14 +44,14 @@ public class HomePresenter implements HomeContract.Presenter {
 
   @Override public void loadData() {
     HttpFactory.getHttpApiSingleton()
-        .getCategoryData("Android", 10, 1)
-        .compose(new HttpTransformer<HttpResult<List<GankEntity>>, List<GankEntity>>())
+        .getHomeWorkBeans("18550444038","RTJ")
+        .compose(new HttpTransformer<HttpResult<List<HomeWorkBean>>, List<HomeWorkBean>>())
         .doOnSubscribe(new Action0() {
           @Override public void call() {
             view.showLoading();
           }
         })
-        .subscribe(new Subscriber<List<GankEntity>>() {
+        .subscribe(new Subscriber<List<HomeWorkBean>>() {
           @Override public void onCompleted() {
             LogUtils.d(TAG, "Completed");
             view.showContent();
@@ -62,7 +62,8 @@ public class HomePresenter implements HomeContract.Presenter {
             view.showError();
           }
 
-          @Override public void onNext(List<GankEntity> gankEntities) {
+          @Override public void onNext(List<HomeWorkBean> gankEntities) {
+
           //  view.showContent();
             view.displayData(gankEntities);
 

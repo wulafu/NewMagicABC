@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+<LinearLayout
+
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:visibility="gone"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            />
+
+        <include layout="@layout/include_main_bar" />
+    </android.support.design.widget.AppBarLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+
+        android:background="@color/rgbe3e3e3"
+        />
+    <cn.com.magicabc.widget.ClearEditText
+        android:drawablePadding="@dimen/xdp_15"
+        android:id="@+id/et_phoneNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="@dimen/xdp_37"
+        android:layout_marginRight="@dimen/xdp_37"
+        android:layout_marginTop="@dimen/xdp_63"
+        android:background="@null"
+        android:drawableLeft="@drawable/userphone"
+        android:hint="@string/mine_input_phone"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:paddingBottom="@dimen/xdp_12"
+        android:paddingTop="@dimen/xdp_12"
+        android:textColor="@color/grey_333"
+        android:textCursorDrawable="@drawable/shape_edit_text"
+        android:textColorHint="@color/textcolortint"
+
+        android:textSize="@dimen/xsp_14"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+
+        android:layout_marginLeft="@dimen/xdp_37"
+        android:layout_marginRight="@dimen/xdp_37"
+        android:background="@color/userphoneline"
+        />
+
+    <cn.com.magicabc.widget.ClearEditText
+        android:drawablePadding="@dimen/xdp_15"
+        android:textCursorDrawable="@drawable/shape_edit_text"
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="@dimen/xdp_37"
+        android:layout_marginRight="@dimen/xdp_37"
+        android:background="@null"
+        android:hint="@string/ui_input_loginpwd"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:drawableLeft="@drawable/passwd"
+        android:paddingBottom="@dimen/xdp_12"
+        android:paddingTop="@dimen/xdp_12"
+        android:textColor="@color/grey_333"
+        android:textColorHint="@color/textcolortint"
+
+        android:textSize="@dimen/xsp_14"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/xdp_37"
+        android:layout_marginRight="@dimen/xdp_37"
+        android:background="@color/userphoneline"
+        />
+    <RelativeLayout
+
+        android:layout_marginLeft="@dimen/xdp_37"
+        android:layout_marginRight="@dimen/xdp_37"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <cn.com.magicabc.widget.ClearEditText
+            android:drawablePadding="@dimen/xdp_15"
+            android:id="@+id/et_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:background="@null"
+            android:drawableLeft="@drawable/code"
+            android:hint="@string/mine_input_phone"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingBottom="@dimen/xdp_12"
+            android:paddingTop="@dimen/xdp_12"
+            android:textColor="@color/grey_333"
+            android:textCursorDrawable="@drawable/shape_edit_text"
+            android:textColorHint="@color/textcolortint"
+
+            android:textSize="@dimen/xsp_14"
+            />
+    <TextView
+    android:text="@string/getcode"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:textSize="@dimen/xsp_14"
+    android:textColor="@color/green"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/login"
+        android:textSize="@dimen/xsp_15"
+        android:layout_marginTop="@dimen/xdp_31"
+        android:background="@drawable/btn_background_login"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/xdp_37"
+        android:layout_marginRight="@dimen/xdp_37"
+        android:layout_height="@dimen/xdp_44"/>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/xdp_20"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/xdp_37"
+        android:layout_marginRight="@dimen/xdp_37"
+        android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/xsp_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_tint"
+                android:lines="1"
+
+                android:textColor="@color/textcolortint"
+                />
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+<LinearLayout
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="@dimen/xdp_20"
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <TextView
+
+        android:textSize="@dimen/xsp_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_gologin"
+        android:lines="1"
+
+        android:textColor="@color/textcolortint"
+        />
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:layout_width="@dimen/xdp_7"
+        android:layout_height="@dimen/xdp_7"
+        android:src="@drawable/arrow"
+        android:layout_marginLeft="@dimen/xdp_8"
+        />
+
+
+</LinearLayout>
+</RelativeLayout>
