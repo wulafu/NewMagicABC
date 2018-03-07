@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:id="@+id/ll"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0dp"
+            >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:visibility="gone"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                />
+
+            <include layout="@layout/include_main_bar" />
+        </android.support.design.widget.AppBarLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+
+            android:background="@color/rgbe3e3e3"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/xdp_15"
+            android:layout_marginRight="@dimen/xdp_15"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/xdp_126">
+
+            <ImageView
+                android:id="@+id/fab_circle"
+                android:layout_width="@dimen/xdp_60"
+                android:layout_height="@dimen/xdp_60"
+
+                android:transitionName="@string/me_transition_name"
+                android:src="@drawable/ic_launcher"
+
+                />
+            <LinearLayout
+                android:layout_marginLeft="@dimen/xdp_10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:text="Kathryn Garcia"
+                    android:textSize="@dimen/xsp_16"
+                    android:textColor="@color/grey_333"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/xdp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="@dimen/xdp_18"
+                        android:layout_height="@dimen/xdp_18"
+                        android:src="@drawable/gold"/>
+
+                    <TextView
+                        android:textSize="@dimen/xsp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/xdp_5"
+                        android:textColor="#F9B721"
+                        android:text="000"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow"
+
+                />
+        </LinearLayout>
+<View
+    android:background="@color/backline"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/xdp_10"/>
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/tv_myproduct"
+            stv:sDividerLineType="both"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_50"
+            stv:sLeftTextColor="@color/grey_333"
+            stv:sLeftTextString="我的作品"
+            stv:sLeftTextSize="@dimen/xsp_16"
+            stv:sLeftViewMarginLeft="@dimen/xdp_10"
+            stv:sLeftIconRes="@drawable/ic_launcher"
+            stv:sLeftIconMarginLeft="@dimen/xdp_15"
+            stv:sLeftIconWidth="@dimen/xdp_20"
+            stv:sLeftIconHeight="@dimen/xdp_20"
+            stv:sRightViewMarginRight="@dimen/xdp_15"
+            stv:sRightTvDrawableRight="@drawable/arrow"
+            stv:sUseRipple="true"
+            />
+        <View
+            android:background="@color/backline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_10"/>
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/tv_myhaibao"
+            stv:sLeftTextColor="@color/grey_333"
+            stv:sBottomDividerLineMarginLR="@dimen/xdp_15"
+            stv:sDividerLineType="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_50"
+            stv:sUseRipple="true"
+            stv:sLeftTextString="我的海报"
+            stv:sLeftTextSize="@dimen/xsp_16"
+            stv:sLeftViewMarginLeft="@dimen/xdp_10"
+            stv:sLeftIconRes="@drawable/ic_launcher"
+            stv:sLeftIconMarginLeft="@dimen/xdp_15"
+            stv:sLeftIconWidth="@dimen/xdp_20"
+            stv:sLeftIconHeight="@dimen/xdp_20"
+            stv:sRightViewMarginRight="@dimen/xdp_15"
+            stv:sRightTvDrawableRight="@drawable/arrow"
+            />
+        <com.allen.library.SuperTextView
+            android:id="@+id/tv_myinvite"
+            stv:sBottomDividerLineMarginLR="@dimen/xdp_15"
+            stv:sDividerLineType="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_50"
+            stv:sLeftTextColor="@color/grey_333"
+            stv:sLeftTextString="我的邀请"
+            stv:sLeftTextSize="@dimen/xsp_16"
+            stv:sLeftViewMarginLeft="@dimen/xdp_10"
+            stv:sLeftIconRes="@drawable/ic_launcher"
+            stv:sLeftIconMarginLeft="@dimen/xdp_15"
+            stv:sLeftIconWidth="@dimen/xdp_20"
+            stv:sLeftIconHeight="@dimen/xdp_20"
+            stv:sRightViewMarginRight="@dimen/xdp_15"
+            stv:sRightTvDrawableRight="@drawable/arrow"
+            stv:sUseRipple="true"
+            />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/tv_mypay"
+            stv:sBottomDividerLineMarginLR="@dimen/xdp_15"
+            stv:sDividerLineType="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_50"
+            stv:sLeftTextColor="@color/grey_333"
+            stv:sLeftTextString="我的奖励"
+            stv:sLeftTextSize="@dimen/xsp_16"
+            stv:sLeftViewMarginLeft="@dimen/xdp_10"
+            stv:sLeftIconRes="@drawable/ic_launcher"
+            stv:sLeftIconMarginLeft="@dimen/xdp_15"
+            stv:sLeftIconWidth="@dimen/xdp_20"
+            stv:sLeftIconHeight="@dimen/xdp_20"
+            stv:sRightViewMarginRight="@dimen/xdp_15"
+            stv:sUseRipple="true"
+            stv:sRightTvDrawableRight="@drawable/arrow"
+           />
+        <com.allen.library.SuperTextView
+            android:id="@+id/tv_tralisten"
+            stv:sBottomDividerLineMarginLR="@dimen/xdp_15"
+            stv:sDividerLineType="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_50"
+            stv:sUseRipple="true"
+            stv:sLeftTextColor="@color/grey_333"
+            stv:sLeftTextString="透明监课"
+            stv:sLeftTextSize="@dimen/xsp_16"
+            stv:sLeftViewMarginLeft="@dimen/xdp_10"
+            stv:sLeftIconRes="@drawable/ic_launcher"
+            stv:sLeftIconMarginLeft="@dimen/xdp_15"
+            stv:sLeftIconWidth="@dimen/xdp_20"
+            stv:sLeftIconHeight="@dimen/xdp_20"
+            stv:sRightViewMarginRight="@dimen/xdp_15"
+            stv:sRightTvDrawableRight="@drawable/arrow"
+           /> <com.allen.library.SuperTextView
+        android:id="@+id/tv_classreport"
+        stv:sBottomDividerLineMarginLR="@dimen/xdp_15"
+            stv:sDividerLineType="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_50"
+        stv:sLeftTextColor="@color/grey_333"
+        stv:sUseRipple="true"
+            stv:sLeftTextString="课堂报告"
+            stv:sLeftTextSize="@dimen/xsp_16"
+            stv:sLeftViewMarginLeft="@dimen/xdp_10"
+            stv:sLeftIconRes="@drawable/ic_launcher"
+            stv:sLeftIconMarginLeft="@dimen/xdp_15"
+            stv:sLeftIconWidth="@dimen/xdp_20"
+            stv:sLeftIconHeight="@dimen/xdp_20"
+            stv:sRightViewMarginRight="@dimen/xdp_15"
+            stv:sRightTvDrawableRight="@drawable/arrow"
+           />
+        <View
+            android:background="@color/backline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_10"/>
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/tv_setting"
+            stv:sUseRipple="true"
+            stv:sDividerLineType="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_50"
+            stv:sCenterBottomTextColor="@color/colorAccent"
+            stv:sLeftTextString="设置"
+            stv:sLeftTextSize="@dimen/xsp_16"
+            stv:sLeftViewMarginLeft="@dimen/xdp_10"
+            stv:sLeftIconRes="@drawable/ic_launcher"
+            stv:sLeftIconMarginLeft="@dimen/xdp_15"
+            stv:sLeftIconWidth="@dimen/xdp_20"
+            stv:sLeftIconHeight="@dimen/xdp_20"
+            stv:sRightViewMarginRight="@dimen/xdp_15"
+            stv:sRightTvDrawableRight="@drawable/arrow"
+            stv:sLeftTextColor="@color/grey_333"
+           />
+    </LinearLayout>
+
+
+</ScrollView>
+
+
+
+
+

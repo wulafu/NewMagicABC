@@ -96,5 +96,6 @@
     <string name="babybirthday">宝贝生日</string>
     <string name="babysex">宝贝性别</string>
     <string name="nextstep">下一步</string>
+    <string name="saveinfo">保存</string>
 
 </resources>

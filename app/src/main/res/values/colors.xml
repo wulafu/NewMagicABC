@@ -28,5 +28,6 @@
     <color name="point_white">#E8E8E8</color>
 
     <color name="translucent_grey_900_96p">#F5212121</color>
+    <color name="backline">#F5F5F3</color>
     <color name="translucent_grey_700_96p">#F5616161</color>
 </resources>

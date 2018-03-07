@@ -20,6 +20,7 @@ import butterknife.OnClick;
 import cn.com.magicabc.MainActivity;
 import cn.com.magicabc.R;
 import cn.com.magicabc.ui.base.BaseActivity;
+import cn.com.magicabc.ui.superviseclass.SuperViseClassActivity;
 import cn.com.magicabc.util.UIUtils;
 
 
@@ -126,6 +127,12 @@ public class GuideActivity extends BaseActivity {
                 startActivity(intent);
                 break;
             case R.id.tv_login:
+                Intent intent1= new Intent();
+                intent1.setClass(this, SuperViseClassActivity.class);
+                intent1.putExtras(getIntent());
+                intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent1.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(intent1);
                 break;
         }
     }

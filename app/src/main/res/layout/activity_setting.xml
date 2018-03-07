@@ -1,27 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:id="@+id/rl"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-android:orientation="vertical"
-    android:layout_height="match_parent">
-    <include layout="@layout/activity_main_include"
-        android:visibility="gone"
-        />
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_circle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:transitionName="@string/me_transition_name"
-        app:backgroundTint="@color/colorPrimaryDark"
-        app:elevation="0dp"
-        app:fabSize="normal"
-     />
+<ScrollView
 
-    <TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:text="ddddddddd"
-    />
-</RelativeLayout>
+    >
+    <LinearLayout
+        android:id="@+id/ll"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0dp"
+
+            >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:visibility="gone"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                />
+
+            <include layout="@layout/include_main_bar" />
+        </android.support.design.widget.AppBarLayout>
+
+        <View
+            android:background="@color/backline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_10"/>
+
+        <com.allen.library.SuperTextView
+            stv:sDividerLineType="both"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_50"
+            stv:sLeftTextString="关于我们"
+            stv:sLeftTextSize="@dimen/xsp_16"
+            stv:sLeftViewMarginLeft="@dimen/xdp_15"
+            stv:sLeftTextColor="@color/grey_333"
+            stv:sRightViewMarginRight="@dimen/xdp_15"
+            stv:sRightTvDrawableRight="@drawable/arrow"
+            /> <com.allen.library.SuperTextView
+            stv:sDividerLineType="both"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_50"
+            stv:sLeftTextString="软件分享"
+            stv:sLeftTextSize="@dimen/xsp_16"
+            stv:sLeftViewMarginLeft="@dimen/xdp_15"
+            stv:sLeftTextColor="@color/grey_333"
+            stv:sRightViewMarginRight="@dimen/xdp_15"
+            stv:sRightTvDrawableRight="@drawable/arrow"
+            /> <com.allen.library.SuperTextView
+            stv:sDividerLineType="both"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_50"
+            stv:sLeftTextString="清除缓存"
+            stv:sLeftTextSize="@dimen/xsp_16"
+            stv:sLeftViewMarginLeft="@dimen/xdp_15"
+            stv:sLeftTextColor="@color/grey_333"
+            stv:sRightViewMarginRight="@dimen/xdp_15"
+            stv:sRightTvDrawableRight="@drawable/arrow"
+            /><com.allen.library.SuperTextView
+            stv:sDividerLineType="both"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_50"
+            stv:sLeftTextString="版本号"
+            stv:sRightTextString="2.0.0"
+            stv:sRightTextColor="@color/grey_333"
+            stv:sLeftTextSize="@dimen/xsp_16"
+            stv:sRightTextSize="@dimen/xsp_16"
+            stv:sLeftViewMarginLeft="@dimen/xdp_15"
+            stv:sLeftTextColor="@color/grey_333"
+            stv:sRightViewMarginRight="@dimen/xdp_15"
+            stv:sRightTvDrawableRight="@drawable/arrow"
+            />
+        <View
+            android:background="@color/backline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_10"/>
+        <com.allen.library.SuperTextView
+            stv:sDividerLineType="both"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xdp_50"
+            stv:sCenterTextString="退出登录"
+            stv:sCenterTextSize="@dimen/xsp_16"
+            stv:sCenterTextColor="@color/green"
+
+            stv:sLeftViewMarginLeft="@dimen/xdp_15"
+
+            stv:sRightViewMarginRight="@dimen/xdp_15"
+
+            />
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+
+
+
+

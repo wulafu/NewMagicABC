@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
               android:layout_width="match_parent"
-              android:orientation="vertical"
-              android:gravity="center_horizontal"
+
+
               android:layout_height="match_parent">
     <TextView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_title"
         android:drawablePadding="-20dp"
         android:paddingRight="20dp"
         android:background="@color/white"
@@ -17,14 +19,19 @@
         android:text="Mark RTG 2017年学习报告"
         android:layout_height="@dimen/xdp_30"/>
     <ImageView
+
+        android:layout_below="@+id/tv_title"
         android:layout_marginTop="@dimen/xdp_13"
         android:layout_width="@dimen/xdp_326"
         android:src="@drawable/starthomework"
         android:layout_height="@dimen/xdp_376"/>
     <RelativeLayout
+
+        android:layout_marginBottom="@dimen/xdp_40"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-android:layout_marginLeft="@dimen/xdp_52"
+        android:layout_marginLeft="@dimen/xdp_52"
         android:layout_marginRight="@dimen/xdp_52"
         >
         <ImageView
@@ -42,4 +49,4 @@ android:layout_marginLeft="@dimen/xdp_52"
     </RelativeLayout>
 
 
-</LinearLayout>
+</RelativeLayout>

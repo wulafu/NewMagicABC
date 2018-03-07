@@ -36,17 +36,19 @@
 
 
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/rl_bomtom"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
+            android:orientation="horizontal"
             android:layout_marginBottom="@dimen/xdp_20"
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/tv_register"
                 android:layout_marginLeft="@dimen/xdp_20"
-                android:layout_width="@dimen/xdp_153"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="@dimen/xdp_44"
                 android:background="@drawable/btn_background_login"
                 android:textSize="@dimen/xsp_15"
@@ -55,10 +57,12 @@
                 android:textColor="@color/white"
                 />
             <TextView
+                android:layout_marginLeft="@dimen/xdp_25"
                 android:id="@+id/tv_login"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="@dimen/xdp_20"
-                android:layout_width="@dimen/xdp_153"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="@dimen/xdp_44"
                 android:background="@drawable/btn_background_register"
                 android:text="@string/login"
@@ -67,7 +71,7 @@
                 android:textColor="@color/grey_333"
                 />
 
-        </RelativeLayout>
+        </LinearLayout>
 
 
 

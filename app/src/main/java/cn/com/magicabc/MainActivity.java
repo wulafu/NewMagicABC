@@ -17,8 +17,8 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import cn.com.magicabc.ui.activity.MeActivity;
 import cn.com.magicabc.ui.activity.MessageActivity;
-import cn.com.magicabc.ui.activity.SettingActivity;
 import cn.com.magicabc.ui.activity.component.DaggerHomeComponent;
 import cn.com.magicabc.ui.activity.module.HomeModule;
 import cn.com.magicabc.ui.activity.persenter.HomePresenter;
@@ -88,9 +88,9 @@ public class MainActivity extends BaseActivity implements PermissionListener {
         //drawerLayout.openDrawer(GravityCompat.START);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
           ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this, mIvMenu, mIvMenu.getTransitionName());
-          startActivity(new Intent(MainActivity.this, SettingActivity.class),activityOptionsCompat.toBundle());
+          startActivity(new Intent(MainActivity.this, MeActivity.class),activityOptionsCompat.toBundle());
         } else {
-          startActivity(new Intent(MainActivity.this, SettingActivity.class));
+          startActivity(new Intent(MainActivity.this, MeActivity.class));
         }
         break;
       case R.id.iv_search:
