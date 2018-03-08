@@ -1,4 +1,4 @@
-package cn.com.magicabc.ui.activity;
+package cn.com.magicabc.ui.me;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
@@ -12,14 +12,17 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.allen.library.SuperTextView;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.com.magicabc.R;
 import cn.com.magicabc.ui.base.BaseActivity;
+import cn.com.magicabc.ui.register.RegisterInfoActivity;
+import cn.com.magicabc.ui.setting.SettingActivity;
+import cn.com.magicabc.ui.superviseclass.SuperViseClassActivity;
 import cn.com.magicabc.util.GuiUtils;
 
 /**
@@ -47,12 +50,18 @@ public class MeActivity extends BaseActivity {
     SuperTextView mTvClassreport;
     @BindView(R.id.tv_setting)
     SuperTextView mTvSetting;
+    @BindView(R.id.tv_title)
+    TextView mTvTitle;
 
 
     @Override
     protected int getLayoutId() {
         return R.layout.activity_me;
     }
+
+
+
+
 
     @Override
     protected void afterCreate(Bundle savedInstanceState) {
@@ -62,7 +71,7 @@ public class MeActivity extends BaseActivity {
         } else {
             setUpView();
         }
-
+        mTvTitle.setText("个人中心");
 
     }
 
@@ -177,24 +186,57 @@ public class MeActivity extends BaseActivity {
         super.onDestroy();
     }
 
-    @OnClick({R.id.tv_setting, R.id.tv_myproduct})
+    @OnClick({R.id.iv_back,R.id.fab_circle, R.id.tv_myproduct, R.id.tv_myhaibao, R.id.tv_myinvite, R.id.tv_mypay, R.id.tv_tralisten, R.id.tv_classreport, R.id.tv_setting,})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.fab_circle:
+
+                startActivity(new Intent(MeActivity.this, RegisterInfoActivity.class));
+
+                break;
+
+            case R.id.tv_myproduct:
+
+                startActivity(new Intent(MeActivity.this, SettingActivity.class));
+
+                break;
+            case R.id.tv_myhaibao:
+
+                startActivity(new Intent(MeActivity.this, SettingActivity.class));
+
+                break;
+            case R.id.tv_myinvite:
+
+                startActivity(new Intent(MeActivity.this, SettingActivity.class));
+
+                break;
+            case R.id.tv_mypay:
+
+                startActivity(new Intent(MeActivity.this, SettingActivity.class));
+
+                break;
+            case R.id.tv_tralisten:
+
+                startActivity(new Intent(MeActivity.this, SuperViseClassActivity.class));
+
+                break;
+            case R.id.tv_classreport:
+
+                startActivity(new Intent(MeActivity.this, SettingActivity.class));
+
+                break;
             case R.id.tv_setting:
 
                 startActivity(new Intent(MeActivity.this, SettingActivity.class));
 
                 break;
-            case R.id.iv_search:
-
+            case R.id.iv_back:
+                onBackPressed();
                 break;
+
         }
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
+
+
 }

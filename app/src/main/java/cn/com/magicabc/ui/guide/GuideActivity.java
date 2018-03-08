@@ -17,10 +17,10 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import cn.com.magicabc.MainActivity;
 import cn.com.magicabc.R;
 import cn.com.magicabc.ui.base.BaseActivity;
-import cn.com.magicabc.ui.superviseclass.SuperViseClassActivity;
+import cn.com.magicabc.ui.login.LoginActivity;
+import cn.com.magicabc.ui.register.RegisterActivity;
 import cn.com.magicabc.util.UIUtils;
 
 
@@ -120,7 +120,7 @@ public class GuideActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.tv_register:
                 Intent intent = new Intent();
-                intent.setClass(this, MainActivity.class);
+                intent.setClass(this, RegisterActivity.class);
                 intent.putExtras(getIntent());
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
@@ -128,7 +128,7 @@ public class GuideActivity extends BaseActivity {
                 break;
             case R.id.tv_login:
                 Intent intent1= new Intent();
-                intent1.setClass(this, SuperViseClassActivity.class);
+                intent1.setClass(this, LoginActivity.class);
                 intent1.putExtras(getIntent());
                 intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent1.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);

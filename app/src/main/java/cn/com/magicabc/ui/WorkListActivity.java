@@ -1,9 +1,7 @@
-package cn.com.magicabc.ui.activity;
+package cn.com.magicabc.ui;
 
 import android.os.Bundle;
-import android.widget.LinearLayout;
 
-import butterknife.BindView;
 import cn.com.magicabc.R;
 import cn.com.magicabc.ui.base.BaseActivity;
 
@@ -11,14 +9,11 @@ import cn.com.magicabc.ui.base.BaseActivity;
  * Created by hellohome on 18/3/2.
  */
 
-public class SettingActivity extends BaseActivity{
-    @BindView(R.id.ll)
-
-    LinearLayout rl;
+public class WorkListActivity extends BaseActivity{
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_setting;
+        return R.layout.activity_worklist;
     }
 
     @Override

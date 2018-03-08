@@ -66,12 +66,14 @@
       android:layout_marginRight="@dimen/xdp_52"
       >
     <ImageView
+        android:id="@+id/iv_huiben"
         android:layout_alignParentLeft="true"
         android:layout_width="@dimen/xdp_77"
         android:layout_height="@dimen/xdp_67"
         android:src="@drawable/huibenguan"
         />
     <ImageView
+        android:id="@+id/iv_word"
         android:layout_alignParentRight="true"
         android:layout_width="@dimen/xdp_77"
         android:layout_height="@dimen/xdp_67"

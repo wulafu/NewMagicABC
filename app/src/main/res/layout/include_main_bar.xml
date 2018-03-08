@@ -11,12 +11,9 @@
         android:layout_marginLeft="@dimen/xdp_15"
         android:layout_gravity="center_vertical"
         android:id="@+id/iv_back"
-        android:layout_width="@dimen/xdp_24"
-        android:layout_height="@dimen/xdp_24"
-        android:background="@drawable/btn_action_bg_selector"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:transitionName="@string/me_transition_name"
+        android:layout_width="@dimen/xdp_23"
+        android:layout_height="@dimen/xdp_23"
+
         android:src="@drawable/back" />
 
 

@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:stv="http://schemas.android.com/apk/res-auto"
-
+    android:fitsSystemWindows="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_height="match_parent"
@@ -39,12 +39,10 @@
 
             <include layout="@layout/include_main_bar" />
         </android.support.design.widget.AppBarLayout>
-        <TextView
+        <View
+            android:background="@color/backline"
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-
-            android:background="@color/rgbe3e3e3"
-            />
+            android:layout_height="@dimen/xdp_10"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
@@ -114,7 +112,7 @@
 
         <com.allen.library.SuperTextView
             android:id="@+id/tv_myproduct"
-            stv:sDividerLineType="both"
+            stv:sDividerLineType="none"
             android:layout_width="match_parent"
             android:layout_height="@dimen/xdp_50"
             stv:sLeftTextColor="@color/grey_333"
@@ -209,7 +207,7 @@
            /> <com.allen.library.SuperTextView
         android:id="@+id/tv_classreport"
         stv:sBottomDividerLineMarginLR="@dimen/xdp_15"
-            stv:sDividerLineType="bottom"
+            stv:sDividerLineType="none"
             android:layout_width="match_parent"
             android:layout_height="@dimen/xdp_50"
         stv:sLeftTextColor="@color/grey_333"

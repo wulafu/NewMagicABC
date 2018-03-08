@@ -8,7 +8,13 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ShortcutBadger" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/fillblankview" />
+            <option value="$PROJECT_DIR$/gvp" />
+            <option value="$PROJECT_DIR$/richtextview" />
+            <option value="$PROJECT_DIR$/sharesdk" />
+            <option value="$PROJECT_DIR$/zxinglibrary" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

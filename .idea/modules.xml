@@ -3,7 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/NewMagicABC.iml" filepath="$PROJECT_DIR$/NewMagicABC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShortcutBadger/ShortcutBadger.iml" filepath="$PROJECT_DIR$/ShortcutBadger/ShortcutBadger.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fillblankview/fillblankview.iml" filepath="$PROJECT_DIR$/fillblankview/fillblankview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gvp/gvp.iml" filepath="$PROJECT_DIR$/gvp/gvp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/richtextview/richtextview.iml" filepath="$PROJECT_DIR$/richtextview/richtextview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sharesdk/sharesdk.iml" filepath="$PROJECT_DIR$/sharesdk/sharesdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zxinglibrary/zxinglibrary.iml" filepath="$PROJECT_DIR$/zxinglibrary/zxinglibrary.iml" />
     </modules>
   </component>
 </project>

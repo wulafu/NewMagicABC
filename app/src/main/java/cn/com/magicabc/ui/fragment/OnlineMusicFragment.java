@@ -61,7 +61,7 @@ public class OnlineMusicFragment extends BaseFragment implements HomeContract.Ho
 
     ToastUtils.showLong(""+gankEntities.size());
     if(gankEntities!=null&&gankEntities.size()==0){
-showEmptyView();
+        showEmptyView();
     }else{
       wordLessonRecyclerViewAdapter.addAllData(gankEntities);
     }

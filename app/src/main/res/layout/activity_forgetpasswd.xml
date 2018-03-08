@@ -135,7 +135,13 @@
 
 
     </RelativeLayout>
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/xdp_37"
+        android:layout_marginRight="@dimen/xdp_37"
+        android:background="@color/userphoneline"
+        />
     <TextView
         android:id="@+id/tv_login"
         android:gravity="center"

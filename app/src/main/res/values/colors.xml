@@ -17,6 +17,8 @@
     <color name="translucent_grey">#809E9E9E</color>
     <color name="translucent_white_8p">#14FFFFFF</color>
     <color name="translucent">#00000000</color>
+    <color name="translucent_">#33000000</color>
+
     <color name="textcolortint">#AEAEAE</color>
     <color name="userphoneline">#EEEEEE</color>
     <color name="rgbe3e3e3">#E3E3E3</color>
